@@ -1,10 +1,10 @@
-import { NameAge } from "./NameAge"
+import { NameAgeClass } from "./NameAgeClass"
 
 function App() {
   return (
     <>
       <h1>Name and Age Sentence Creator</h1>
-      <NameAge />
+      <NameAgeClass />
     </>
   )
 }
