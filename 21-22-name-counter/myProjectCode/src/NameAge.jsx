@@ -1,8 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function NameAge() {
   const [name, setName] = useState("")
   const [age, setAge] = useState(0)
+
+  useEffect(() => {
+    console.log("I am changing the age to", age)
+  }, [age])
 
   function decreaseAge() {
     setAge((currentAge) => currentAge - 1)

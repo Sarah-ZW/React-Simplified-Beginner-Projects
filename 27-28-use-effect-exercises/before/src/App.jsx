@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Child } from "./Child"
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <div>
-      <button onClick={() => setShow(currentShow => !currentShow)}>
+      <button onClick={() => setShow((currentShow) => !currentShow)}>
         Show/Hide
       </button>
       {childComponent}
