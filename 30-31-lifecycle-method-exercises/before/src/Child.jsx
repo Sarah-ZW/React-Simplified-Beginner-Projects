@@ -9,19 +9,35 @@ export class Child extends React.Component {
     }
   }
 
+  componentDidUpdate(prevprop, prevstate) {
+    if (prevstate.name !== this.state.name) {
+      console.log("re-render")
+    }
+    if (
+      prevstate.name !== this.state.name ||
+      prevstate.age !== this.state.age
+    ) {
+      console.log(`My name is ${this.state.name} and I am ${this.state.age}`)
+    }
+  }
+
+  componentDidMount() {
+    console.log("hi")
+  }
+
   render() {
     return (
       <div>
         <input
           type="text"
           value={this.state.name}
-          onChange={e => this.setState({ name: e.target.value })}
+          onChange={(e) => this.setState({ name: e.target.value })}
         />
         <br />
         <br />
         <button
           onClick={() =>
-            this.setState(state => {
+            this.setState((state) => {
               return { age: state.age - 1 }
             })
           }
@@ -31,7 +47,7 @@ export class Child extends React.Component {
         {this.state.age}
         <button
           onClick={() =>
-            this.setState(state => {
+            this.setState((state) => {
               return { age: state.age + 1 }
             })
           }
