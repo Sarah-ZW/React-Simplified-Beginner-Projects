@@ -10,9 +10,17 @@ export class Child extends React.Component {
   }
 
   componentDidUpdate(prevprop, prevstate) {
+    console.log("re-render")
+
     if (prevstate.name !== this.state.name) {
-      console.log("re-render")
+      document.title = this.state.name
+
+      if (this.varSetTimeout != null) clearTimeout(this.varSetTimeout)
+      this.varSetTimeout = setTimeout(() => {
+        console.log(`My name is ${this.state.name}`)
+      }, 1000)
     }
+
     if (
       prevstate.name !== this.state.name ||
       prevstate.age !== this.state.age
@@ -23,6 +31,11 @@ export class Child extends React.Component {
 
   componentDidMount() {
     console.log("hi")
+    console.log("re-render")
+  }
+  componentWillUnmount() {
+    console.log("bye")
+    if (this.varSetTimeout != null) clearTimeout(this.varSetTimeout)
   }
 
   render() {
