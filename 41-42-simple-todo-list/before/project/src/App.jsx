@@ -1,3 +1,4 @@
+import { TodoItem } from "./TodoItem"
 import "./styles.css"
 import { useState } from "react"
 
@@ -18,19 +19,35 @@ function App() {
       setNewItem("")
     }
   }
-  //next thing is to set the value of completed using e.target.checked from the checkbox
+
+  function toggleTodo(id, completed) {
+    setTodos((currentTodos) => {
+      return currentTodos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, completed }
+        }
+        return todo
+      })
+    })
+  }
+
+  function handleDelete(id) {
+    setTodos((currentTodos) => {
+      return currentTodos.filter((todo) => id !== todo.id)
+    })
+  }
+
   return (
     <>
       <ul id="list">
         {todos.map((todo) => {
           return (
-            <li key={todo.id} className="list-item">
-              <label className="list-item-label">
-                <input type="checkbox" value={todo.completed} data-list-item-checkbox />
-                <span data-list-item-text>{todo.name}</span>
-              </label>
-              <button data-button-delete>Delete</button>
-            </li>
+            <TodoItem
+              key={todo.id}
+              {...todo}
+              handleDelete={handleDelete}
+              toggleTodo={toggleTodo}
+            />
           )
         })}
       </ul>
