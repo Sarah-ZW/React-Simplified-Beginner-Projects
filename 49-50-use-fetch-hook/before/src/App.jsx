@@ -26,7 +26,7 @@ const URLS = {
 function App() {
   const [url, setUrl] = useState(URLS.USERS)
 
-  const { data, isLoading, isError } = useFetch.useFetch(url)
+  const { data, isLoading, isError } = useFetch(url)
   // BONUS:
   // const { data, isLoading, isError } = useFetch(url, OPTIONS)
 
