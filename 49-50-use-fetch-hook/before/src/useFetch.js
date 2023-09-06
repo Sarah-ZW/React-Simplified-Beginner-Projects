@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export function useFetch(url) {
+export function useFetch(url, options = {}) {
   const [isLoading, setLoading] = useState(true)
   const [data, setData] = useState()
   const [isError, setError] = useState(false)
@@ -10,11 +10,24 @@ export function useFetch(url) {
     setError(false)
     setLoading(true)
 
-    fetch(url)
-      .then((res) => res.json())
+    const controller = new AbortController()
+
+    fetch(url, { signal: controller.signal, ...options })
+      .then((res) => {
+        if (res.ok) return res.json()
+        return Promise.reject(res)
+      })
       .then(setData)
-      .catch(() => setError(true))
-      .finally(() => setLoading(false))
+      .catch((e) => {
+        if (e.name === "AbortError") return
+        setError(true)
+      })
+      .finally(() => {
+        if (controller.signal.aborted) return
+        setLoading(false)
+      })
+
+    return () => controller.abort()
   }, [url])
 
   return {
