@@ -1,7 +1,7 @@
 import {useArray} from "./useArray"
 
 const INITIAL_ARRAY = [1, 2, 3]
-// const INITIAL_ARRAY = () => [1, 2, 3]
+//const INITIAL_ARRAY = () => [1, 2, 3]
 
 function App() {
   const { array, set, push, replace, filter, remove, clear, reset } =
