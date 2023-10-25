@@ -4,6 +4,7 @@ import "../client/styles.css"
 export function Posts() {
   const posts = useLoaderData()
 
+
   return (
     <>
       <div className="container">
@@ -17,10 +18,9 @@ export function Posts() {
                 <div className="card-preview-text">{post.body}</div>
               </div>
               <div className="card-footer">
-                <a className="btn">
-                  {" "}
-                  <Link to="`post/${post.id}`">View</Link>
-                </a>
+              
+                  <Link to={`${post.id.toString()}`}>View</Link>
+            
               </div>
             </div>)
           })}
