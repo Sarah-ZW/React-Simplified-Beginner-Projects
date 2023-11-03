@@ -4003,7 +4003,6 @@
       "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
   ],
-
   "photos": [
     {
       "albumId": 1,
@@ -39006,7 +39005,6 @@
       "thumbnailUrl": "https://via.placeholder.com/150/6dd9cb"
     }
   ],
-
   "posts": [
     {
       "userId": 1,
@@ -39607,6 +39605,78 @@
       "id": 100,
       "title": "at nam consequatur ea labore ea harum",
       "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    },
+    {
+      "title": "newPostTitle",
+      "userId": "1",
+      "body": "newPostTitle",
+      "id": 101
+    },
+    {
+      "title": "new Title Post",
+      "userId": "1",
+      "body": "body of new post",
+      "id": 102
+    },
+    {
+      "title": "post",
+      "userId": "1",
+      "body": "post body",
+      "id": 103
+    },
+    {
+      "title": "ll",
+      "userId": "1",
+      "body": "kk",
+      "id": 104
+    },
+    {
+      "title": "ffds",
+      "userId": "1",
+      "body": "fsd",
+      "id": 105
+    },
+    {
+      "title": "lghkj",
+      "userId": "1",
+      "body": "lkjh",
+      "id": 106
+    },
+    {
+      "title": "jkgkjgkjg",
+      "userId": "1",
+      "body": "kjghkjlh",
+      "id": 107
+    },
+    {
+      "title": "jjjjjjjjjjjjj",
+      "userId": "1",
+      "body": "jjjjjjjjjjjjjjjjj",
+      "id": 108
+    },
+    {
+      "title": "fdasdf",
+      "userId": "1",
+      "body": "asdfasdfsadf",
+      "id": 109
+    },
+    {
+      "title": "kjkjkkjl",
+      "userId": "1",
+      "body": "hjjhjh",
+      "id": 110
+    },
+    {
+      "title": "lkjhl",
+      "userId": "1",
+      "body": "klj",
+      "id": 111
+    },
+    {
+      "title": "jkjkl",
+      "userId": "1",
+      "body": "kjhjkl",
+      "id": 112
     }
   ],
   "todos": [
@@ -40811,7 +40881,6 @@
       "completed": false
     }
   ],
-
   "users": [
     {
       "id": 1,
