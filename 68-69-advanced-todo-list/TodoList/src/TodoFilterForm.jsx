@@ -7,7 +7,7 @@ export function TodoFilterForm({
   return (
     <div className="filter-form">
       <div className="filter-form-group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Filter</label>
         <input
           type="text"
           id="name"
